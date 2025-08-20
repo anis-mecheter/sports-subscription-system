@@ -34,7 +34,11 @@ The system also includes an **Admin Dashboard** to manage users, sports, subscri
 
 # Project Setup
 
-To install dependencies and run the project:
+To install dependencies:
 ```bash
 npm install
+```
+To run the project:
+```bash
 node server.js
+```
