@@ -1,0 +1,70 @@
+/* ===== Global Styles ===== */
+body {
+  font-family: Arial, sans-serif; /* Set font for the page */
+  background-color: #f4f6f9; /* Light gray background */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  color: #333; /* Default text color */
+}
+
+/* ===== Container for the table ===== */
+.container {
+  width: 90%; /* Set container width */
+  max-width: 1000px; /* Maximum width */
+  margin: 40px auto; /* Center container with top and bottom margin */
+  background: #fff; /* White background */
+  padding: 25px 30px; /* Inner padding */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Light shadow */
+}
+
+/* ===== Page title ===== */
+.container h2 {
+  text-align: center; /* Center align text */
+  color: black; /* Title color */
+  margin-bottom: 20px; /* Space below title */
+}
+
+/* ===== Table Styling ===== */
+table {
+  width: 100%; /* Full width table */
+  border-collapse: collapse; /* Merge borders */
+  margin-top: 15px; /* Top spacing */
+}
+
+table thead {
+  background-color: #007A33; /* Header background color */
+  color: white; /* Header text color */
+}
+
+table th, table td {
+  padding: 14px 12px; /* Cell padding */
+  text-align: center; /* Center text */
+  border-bottom: 1px solid #ddd; /* Bottom border */
+}
+
+/* ===== Table Rows ===== */
+table tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Light gray for even rows */
+}
+
+table tbody tr:hover {
+  background-color: #f1f1f1; /* Hover effect */
+  transition: 0.3s; /* Smooth transition */
+}
+
+/* ===== Delete Button ===== */
+button.delete-btn {
+  background-color: #e74c3c; /* Red background */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  padding: 8px 14px; /* Button padding */
+  border-radius: 6px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  font-size: 14px; /* Font size */
+  transition: 0.3s; /* Smooth hover transition */
+}
+
+button.delete-btn:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}

@@ -1,0 +1,112 @@
+/* Global body styling */
+body {
+  font-family: Arial, sans-serif; /* Set main font */
+  background-color: #f4f6f9; /* Light background */
+  margin: 0;
+  padding: 20px; /* Padding around content */
+  color: #333; /* Default text color */
+}
+
+/* Main container */
+.container {
+  max-width: 1000px; /* Maximum width */
+  margin: auto; /* Center container */
+  background: #fff; /* White background */
+  padding: 25px; /* Inner padding */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+.container h2{
+  text-align: center; /* Centered heading */
+}
+
+/* Dashboard cards container */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive columns */
+  gap: 20px; /* Gap between cards */
+  margin-bottom: 40px; /* Space below cards */
+}
+
+/* Individual card styling */
+.card {
+  background: #007A33; /* Green background */
+  padding: 20px; /* Inner padding */
+  border-radius: 12px; /* Rounded corners */
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Shadow for depth */
+  transition: 0.3s; /* Smooth hover transition */
+  cursor: pointer; /* Pointer on hover */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.card h3 {
+  font-size: 18px; /* Title font size */
+  color: #fff; /* White text */
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 26px; /* Number font size */
+  font-weight: bold; /* Bold numbers */
+  color: #fff; /* White text */
+}
+
+/* Top 5 sports section */
+.most {
+  background: #fff; /* White background */
+  padding: 25px; /* Inner padding */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Shadow */
+  margin-top: 20px; /* Top margin */
+}
+
+.most h3 {
+  margin-bottom: 20px;
+  color: #007A33; /* Green heading */
+}
+
+/* Table styling */
+table {
+  width: 100%; /* Full width */
+  border-collapse: collapse; /* Remove gaps */
+}
+
+table thead {
+  background: #007A33; /* Header background */
+  color: white; /* Header text color */
+}
+
+table th, table td {
+  padding: 12px; /* Cell padding */
+  border-bottom: 1px solid #ddd; /* Row separator */
+  text-align: center;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Stripe effect */
+}
+
+table tbody tr:hover {
+  background-color: #f1f1f1; /* Highlight row on hover */
+}
+
+/* Delete button styling */
+.delete-btn {
+  background-color: #e74c3c; /* Red button */
+  color: white; /* White text */
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  font-size: 14px;
+  transition: 0.3s; /* Smooth transition */
+}
+
+.delete-btn:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <!-- Link to CSS file for styling dashboard -->
+    <link rel="stylesheet" href="admin-dashboard.css">
+</head>
+<body>
+
+    <!-- Dashboard cards section -->
+    <div class="dashboard-cards">
+        <!-- Total users card -->
+        <div class="card">
+            <h3>Total users</h3>
+            <p id="userCount">0</p>
+        </div>
+        <!-- Total subscriptions card -->
+        <div class="card">
+            <h3>Total subscriptions</h3>
+            <p id="subscriptionCount">0</p>
+        </div>
+        <!-- Total sports card -->
+        <div class="card">
+            <h3>Total sports</h3>
+            <p id="sportCount">0</p>
+        </div>
+    </div>
+
+    <!-- Top 5 most subscribed sports table -->
+    <div class="most">
+        <h3>Top 5 most subscribed sports</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sport name</th>
+                    <th>Subscriptions</th>
+                </tr>
+            </thead>
+            <tbody id="topSportsTableBody">
+                <!-- Dynamic rows will be inserted here by JS -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Link to JS file for fetching stats and top sports -->
+    <script src="admin-dashboard.js"></script>
+
+</body>
+</html>

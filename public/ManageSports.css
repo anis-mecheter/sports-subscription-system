@@ -1,0 +1,149 @@
+/* ===== Body styles ===== */
+body {
+  font-family: Arial, sans-serif; /* Set default font */
+  padding: 40px; /* Page padding */
+  background-color: #f5f5f5; /* Light gray background */
+}
+
+/* ===== Main container ===== */
+.container {
+  max-width: 1000px; /* Max width of container */
+  margin: auto; /* Center horizontally */
+  background: #fff; /* White background */
+  padding: 25px; /* Inner spacing */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1); /* Soft shadow */
+}
+
+/* ===== Headings ===== */
+h2 {
+  text-align: center; /* Center heading */
+  margin-bottom: 20px; /* Space below heading */
+  color: #333; /* Dark gray text */
+}
+
+/* ===== Table styles ===== */
+table {
+  width: 100%; /* Full width */
+  border-collapse: collapse; /* Merge borders */
+  margin-bottom: 25px; /* Space below table */
+}
+
+table th, table td {
+  border: 1px solid #ddd; /* Light border */
+  padding: 12px; /* Cell padding */
+  text-align: center; /* Center text */
+}
+
+table th {
+  background-color: #007A33; /* Green header */
+  color: white; /* White text */
+  font-weight: bold; /* Bold text */
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Stripe effect for even rows */
+}
+
+table img {
+  height: 60px; /* Fixed image height */
+  border-radius: 6px; /* Rounded corners for images */
+}
+
+/* ===== Action buttons ===== */
+.actions button {
+  margin: 2px; /* Small margin between buttons */
+  padding: 6px 12px; /* Button padding */
+  border: none; /* Remove border */
+  border-radius: 6px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 14px; /* Font size */
+  transition: 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+/* Delete button */
+.delete-btn {
+  background-color: #e74c3c; /* Red color */
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+.delete-btn:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+
+/* Edit button */
+.edit-btn {
+  background-color: #217dbb; /* Blue color */
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+.edit-btn:hover {
+  background-color: #217dbb; /* Maintain same blue on hover */
+}
+
+/* Save button */
+.save-btn {
+  background-color: #007A33; /* Green color */
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.save-btn:hover {
+  background-color: #005f27; /* Darker green on hover */
+}
+
+/* ===== Add form ===== */
+form {
+  display: flex; /* Flex layout */
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  gap: 10px; /* Space between inputs */
+  align-items: center; /* Vertical alignment */
+}
+
+input[type="text"], input[type="file"] {
+  padding: 8px; /* Input padding */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 6px; /* Rounded corners */
+  flex: 1; /* Take available space */
+  min-width: 200px; /* Minimum width */
+}
+
+/* ===== Responsive design ===== */
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block; /* Stack table elements */
+  }
+  table tr {
+    margin-bottom: 15px; /* Space below each row */
+    border: 1px solid #ddd; /* Row border */
+    padding: 10px; /* Row padding */
+  }
+  table td {
+    text-align: right; /* Align text right */
+    padding-left: 50%; /* Space for labels */
+    position: relative; /* Relative positioning for pseudo-element */
+  }
+  table td::before {
+    position: absolute; /* Position pseudo-element */
+    left: 10px; /* Left offset */
+    font-weight: bold; /* Bold label */
+    color: #555; /* Dark gray label */
+  }
+  table td:nth-child(1)::before { content: "ID"; } /* Label for first column */
+  table td:nth-child(2)::before { content: "Sport Name"; } /* Label for second column */
+  table td:nth-child(3)::before { content: "Image"; } /* Label for third column */
+  table td:nth-child(4)::before { content: "Actions"; } /* Label for fourth column */
+}

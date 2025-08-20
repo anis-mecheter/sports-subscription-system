@@ -1,0 +1,277 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif; /* Reset default padding/margin and set default font */
+}
+   
+body {
+    font-family: Tahoma, sans-serif;
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 20px;
+}
+
+.subscription {
+    width: 350px;
+    background: #fff;
+    border: 1px solid #007A33; /* Green border */
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px; /* Rounded corners */
+    line-height: 40px;
+}
+
+h1 {
+    color: #000;
+}
+
+header{
+    height: 100px;
+    display: flex;
+    justify-content: space-between; /* Space between logo and buttons */
+    align-items: first baseline;
+    position: sticky;
+    top: 10px; /* Sticky header */
+}
+
+.right-buttons{
+    width:230px;
+    display: flex;
+    justify-content:right;
+    gap: 30px; /* Space between buttons */
+}
+
+button{
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover{
+    transform: scale(1.2); /* Hover effect */
+}
+
+button #icon1{
+    color: #007A33;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+button #icon2{
+    color: #007A33;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.your-subscriptions{
+    padding: 10px;
+}
+
+#accountPopup {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+#accountPopup.hidden {
+    display: none; /* Hide popup initially */
+}
+
+.profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.account-name {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.log-out {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: #e74c3c; /* Red button */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.log-out:hover{
+    transform: scale(1.1);
+}
+
+.account-info{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: #007A33; /* Green button */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.account-info:hover{
+    transform: scale(1.1);
+}
+
+#username{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* overlay for modal background */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent */
+    display: none;
+    z-index: 999;
+}
+
+/* subscription modal */
+#subscription-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    max-width: 400px;
+    width: 90%;
+}
+
+#subscription-modal label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#subscription-modal input,
+#subscription-modal select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#subscription-modal button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#subscription-modal button[type="submit"] {
+    background-color: #007A33;
+    color: white;
+    margin-left: 10px;
+    transition: .3s;
+}
+
+#subscription-modal button#close-modal {
+    background-color: #e74c3c;
+    color: white;
+    transition: .3s;
+}
+
+#subscription-modal button[type="submit"]:hover{
+    transform: scale(1.2); /* Hover effect */
+}
+
+#subscription-modal button#close-modal:hover{
+    transform: scale(1.2);
+}
+
+.subscription-item {
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    width: 95px;
+    height: 40px;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    transition: .3s;
+}
+
+.delete-btn:hover{
+    transform: scale(1.2);
+    background-color: #f83721; /* Darker red on hover */
+}
+
+.delete-btn i{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#subscriptions{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.edit-profile-img{
+    width: 25px;
+    height: 25px;
+    background-color: #007A33;
+    position: absolute;
+    top: 23%;
+    left: 33%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+.edit-profile-img:hover{
+    transform: scale(1.2);
+}
+
+.fi-sr-camera{
+    color: #FFFFFF;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 4px;
+    display: block; /* Show error message under input */
+}

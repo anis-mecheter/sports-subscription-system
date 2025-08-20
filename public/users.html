@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Users</title>
+  <!-- Link to external CSS file for styling the page -->
+  <link rel="stylesheet" href="users.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Page title -->
+    <h2>All Registered Users</h2>
+
+    <!-- Users table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Email</th> <!-- User email column -->
+          <th>Username</th> <!-- User username column -->
+          <th>Action</th> <!-- Actions (Edit/Delete) column -->
+        </tr>
+      </thead>
+      <tbody id="userTableBody">
+        <!-- Users will be dynamically loaded here via JS -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Link to external JS file for functionality -->
+  <script src="users.js"></script>
+</body>
+</html>

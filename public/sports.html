@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Sports</title>
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="ManageSports.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Manage Sports</h2> <!-- Page heading -->
+
+    <!-- Container to dynamically list all sports -->
+    <div id="sportsList"></div>
+
+    <h3>Add new sport</h3> <!-- Form heading -->
+    <!-- Form to add a new sport with text and file input -->
+    <form id="addSportForm" enctype="multipart/form-data">
+      <input type="text" name="name" placeholder="Sport Name" required /> <!-- Sport name input -->
+      <input type="file" name="sport_img" required /> <!-- Sport image upload -->
+      <button class="save-btn" type="submit">Add</button> <!-- Submit button -->
+    </form>
+  </div>
+
+  <!-- Link to external JS file -->
+  <script src="sports.js"></script>
+  
+</body>
+</html>

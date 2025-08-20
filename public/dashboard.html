@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>your account</title>
+  <link rel="stylesheet" href="dashboardStyle.css">
+  <!-- Solid Rounded Icons -->
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
+</head>
+<body>
+
+  <header>
+    <!-- Account welcome title with dynamic username -->
+    <h1 class="account-title">Welcome to your account <span style="font-weight: bolder; color: #007A33;" class="account-title-word"></span> !</h1>
+    
+    <!-- Right buttons: add subscription and account -->
+    <div class="right-buttons">
+      
+      <button id="add-subscription-btn">
+        <i class="fi fi-sr-square-plus" id="icon1"></i>
+      </button>
+      
+      <button>
+        <i class="fi fi-sr-circle-user" id="icon2"></i>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Section for user's subscriptions -->
+  <h1 class="your-subscriptions">Your subscriptions</h1>
+  <div id="subscriptions">
+    <!-- Subscriptions will be dynamically inserted here -->
+  </div>
+
+  <!-- Account popup -->
+  <div id="accountPopup" class="hidden">
+    <!-- Profile picture -->
+    <img id="profileImage" class="profile-pic" src="/<%= user.profile_picture %>" alt="Profile" style="border: #007A33 2px solid;"/>
+
+    <!-- Profile image upload form -->
+    <form action="/upload-profile" method="POST" enctype="multipart/form-data">
+      <input type="file" name="profile_image" accept="image/*" id="fileInput" hidden>
+      <button type="button" class="edit-profile-img" onclick="document.getElementById('fileInput').click();">
+        <i class="fi-sr-camera"></i>
+      </button>
+    </form>
+
+    <!-- Display username -->
+    <p id="username" style="font-weight:400; font-size:30px;"></p>
+
+    <!-- Account info button -->
+    <a href="/account.html">
+      <button class="account-info">Account Info</button>
+    </a>
+
+    <!-- Logout button -->
+    <button class="log-out" id="logoutBtn">Log out</button>
+  </div>
+
+  <!-- Overlay for modal background -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Add subscription modal -->
+  <div id="subscription-modal" style="display:none;">
+    <h1>Add a sport</h1>
+    <form id="subscription-form">
+      <label for="sport">Choose a sport:</label>
+      <select id="sport-select" name="sport_id" required></select>
+
+      <label for="type">Subscription type:</label>
+      <select name="type" id="type" required>
+        <option value="">-- Choose the type of subscription --</option>
+        <option value="Monthly">Monthly</option>
+        <option value="Yearly">Yearly</option>
+      </select>
+
+      <label for="start-date">Start Date</label>
+      <input type="date" id="start-date" name="start_date" required>
+      <span id="startDateError" class="error-message"></span>
+
+      <button type="button" id="close-modal">Cancel</button>
+      <button type="submit">Save</button>
+    </form>
+  </div>
+
+  <script src="dahboardScript.js"></script>
+</body>
+</html>

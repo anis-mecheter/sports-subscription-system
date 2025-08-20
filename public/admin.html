@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+
+    <!-- Link to custom admin CSS -->
+    <link rel="stylesheet" href="admin.css">
+
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+    
+    <!-- Sidebar menu -->
+    <div class="menu">
+        <ul>
+            <!-- Profile section -->
+            <li class="profile">
+                <div class="img-box">
+                    <img src="images/admin.png" alt="profile">
+                </div>
+                <h2>Admin</h2>
+            </li>
+
+            <!-- Navigation links -->
+            <li>
+                <a href="admin-dashboard.html" target="contentFrame">
+                    <i class="fas fa-columns"></i>
+                    <p>Dashboard</p>
+                </a>
+            </li>
+            <li>
+                <a href="users.html" target="contentFrame">
+                    <i class="fas fa-users"></i>
+                    <p>Users</p>
+                </a>
+            </li>
+            <li>
+                <a href="sebsecriptions.html" target="contentFrame">
+                    <i class="fas fa-credit-card"></i>
+                    <p>Subscriptions</p>
+                </a>
+            </li>
+            <li>
+                <a href="sports.html" target="contentFrame">
+                    <i class="fas fa-dumbbell"></i>
+                    <p>Sports</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Main content section -->
+    <div class="content">
+        <!-- iframe to load different pages dynamically -->
+        <iframe name="contentFrame" class="frame" src="" frameborder="0"></iframe>
+    </div>
+
+    <!-- Link to JS file for sidebar behavior -->
+    <script src="admin.js"></script>
+</body>
+</html>

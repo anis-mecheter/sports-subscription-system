@@ -1,0 +1,66 @@
+/* General page styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Main container styling */
+.container {
+  max-width: 600px;
+  margin: auto;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Page heading */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form labels */
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Input and select fields styling */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select {
+  width: 97%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+/* Form action buttons container */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Buttons general styling */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007A33;
+  color: white;
+  cursor: pointer;
+}
+
+/* Specific styling for "Go Back" button */
+.goBack {
+  background-color: #e74c3c;
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sport-wbsite</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+  </head>
+
+  <body>
+    <div class="parent">
+      <header>
+        <div class="logo">
+          <h1 style="cursor: pointer;"><a href="#">Sport</a></h1>
+        </div>
+        
+        <div class="options">
+          <a href="#our-sports">Our sports</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+
+        </div>
+
+      </header>
+      <main>
+        <section class="sec1">
+          <img src="images/image1.png" alt="image1" loading="lazy"/>
+        </section>
+
+      
+
+        <section class="sec2">
+          <h2>Welcome to the sports registration website</h2>
+          <p>
+            Here you will find your passion. Choose your favorite sport and
+            start your path to excellence!
+          </p>
+          <div class="btns">
+            <input type="button" value="Log in" class="Log-in butn" />
+            <input type="button" value="Sign up" class="Sign-up butn" />
+          </div>
+        </section>
+        
+      
+
+        <section class="sec3">
+          
+  <!-- Swiper -->
+  <div class="swiper-container" id="our-sports">
+    <div class="swiper-wrapper" id="sports-swiper">
+        <!-- Slides will be added here from JavaScript -->
+
+    </div>
+    <!--Pagination-->
+    <div class="swiper-pagination"></div>
+    <!--Navigation-->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
+
+      </main>
+      <footer>
+
+        <div class="contact">
+          <h2 id="contact">Contact us</h2>
+
+        <div class="contact-links">
+            <a href="#" title="facebook"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg" alt="Facebook" width="24" height="24"></a>
+          <a href="#" title="instagram"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram" width="24" height="24"></a>
+          <a href="#" title="x"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/x.svg" alt="X (Twitter)" width="24" height="24"></a>
+          <a href="#" title="linkedin"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" alt="LinkedIn" width="24" height="24"></a>
+          <a href="#" title="tiktok"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/tiktok.svg" alt="TikTok" width="24" height="24"></a>
+        </div>
+        </div>
+
+        <div class="right">
+            <p>© 2025 All rights reserved.</p>
+        </div>
+
+        <div class="about">
+            <h2 id="about">About us</h2>
+<div class="p-about">
+  We are an organisation that work in sports subsecriptions
+</div>
+          </div>
+
+      </footer>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+
+    <div class="form-container" id="multiStepForm">
+      <div class="step active" id="step1">
+        <div class="window-title">
+          <h1>Sign up</h1>
+
+          <button class="close-btn" onclick="closeWindow()">
+            <i class="fi fi-rr-cross"></i>
+          </button>
+        </div>
+
+        <input type="email" name="email" id="email" placeholder="Email" />
+<div class="error-message" id="emailError"></div>
+
+<input type="text" name="username" id="username" placeholder="Username" />
+<div class="error-message" id="usernameError"></div>
+
+<input type="password" name="password" id="password" placeholder="Password" />
+<div class="error-message" id="passwordError"></div>
+
+<input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm password" />
+<div class="error-message" id="confirmPasswordError"></div>
+
+        <button class="next-btn" onclick="nextStep(2)">Next</button>
+      </div>
+
+      <div class="step" id="step2">
+        <div class="window-title">
+          <h1>Sign up</h1>
+
+          <button class="close-btn" onclick="closeWindow()">
+            <i class="fi fi-rr-cross"></i>
+          </button>
+        </div>
+        <h4 class="h4-label">Enter your birthday</h4>
+        <input type="date" name="date" id="date" />
+        <div class="error-message" id="dateError"></div>
+        <h4 class="h4-label">Enter your sex</h4>
+
+
+<input type="radio" name="sex" value="male" id="male" />
+<label for="male" class="sex-label">male</label>
+
+
+<input type="radio" name="sex" value="female" id="female" />
+<label for="female" class="sex-label">female</label>
+<div class="error-message" id="sexError"></div>
+
+
+
+        <div class="buttons">
+          <button class="back-btn" onclick="nextStep(1)">Back</button>
+          <button class="next-btn" onclick="nextStep(3)">Next</button>
+        </div>
+      </div>
+
+      <div class="step" id="step3">
+        <div class="window-title">
+          <h1>Sign up</h1>
+
+          <button class="close-btn" onclick="closeWindow()">
+            <i class="fi fi-rr-cross"></i>
+          </button>
+        </div>
+        <h4 class="h4-label">
+          Do you agree to the Terms of Use and Privacy Policy?
+        </h4>
+        <div class="privacy-policy">
+          <textarea name="Policy" id="Policy" disabled>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum et delectus dignissimos quam cum aut, tenetur adipisci sunt. Ratione corrupti nulla dolores doloremque dolorum rerum id obcaecati aliquid suscipit necessitatibus, a explicabo facere perferendis accusamus iste nobis eligendi odio similique modi commodi fugiat. Beatae necessitatibus aut, saepe, impedit illo dignissimos ducimus dolorum ex itaque autem voluptate eos culpa laborum voluptates rerum, a distinctio molestiae ratione maxime rem? Distinctio sed quibusdam similique nihil quia natus dolorem exercitationem doloribus repellat cupiditate beatae, et eos incidunt perferendis. Consequuntur quae tempora dolore recusandae ipsum natus eaque, possimus quam, totam reiciendis autem at pariatur eum!
+      </textarea
+          >
+        </div>
+        <div class="agree-div">
+          <input type="checkbox" name="I-agree" id="agree-checkbox" />
+          <label lass="agree-label"
+            >I agree to the Terms of Use and Privacy Policy</label
+          >
+        </div>
+        <div class="error-message" id="agreeError"></div>
+        <button class="back-btn" onclick="nextStep(2)">Back</button>
+        <button class="fenish-btn">Fenish</button>
+      </div>
+    </div>
+
+<!-- Login window -->
+<div class="login-modal" id="loginModal">
+  <div class="login-content">
+    <div class="login-header">
+      <h2>Log In</h2>
+      <button class="close-btn" onclick="toggleLoginModal(false)">
+        <i class="fi fi-rr-cross"></i>
+      </button>
+    </div>
+    <input type="email" id="loginEmail" placeholder="Email" />
+    <input type="password" id="loginPassword" placeholder="Password" />
+    <button class="login-submit">Log In</button>
+  </div>
+</div>
+
+
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="swiper.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

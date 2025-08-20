@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Subscriptions</title>
+  <!-- Link to external CSS for styling the subscriptions page -->
+  <link rel="stylesheet" href="ManageSebscriptions.css">
+</head>
+<body>
+  <!-- Main container for the subscriptions table -->
+  <div class="container">
+    <h2>All Subscriptions</h2>
+    <!-- Table displaying all subscriptions -->
+    <table>
+      <thead>
+        <tr>
+          <th>User</th> <!-- Column for user name -->
+          <th>Email</th> <!-- Column for user email -->
+          <th>Sport</th> <!-- Column for sport name -->
+          <th>Type</th> <!-- Column for subscription type -->
+          <th>Start Date</th> <!-- Column for subscription start date -->
+          <th>Action</th> <!-- Column for action buttons (edit/delete) -->
+        </tr>
+      </thead>
+      <tbody id="subscriptionsBody">
+        <!-- Subscription rows will be dynamically loaded here via JS -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Link to external JavaScript for managing subscriptions -->
+  <script src="ManageSebscriptions.js"></script>
+</body>
+</html>
