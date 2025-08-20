@@ -32,8 +32,9 @@ The system also includes an **Admin Dashboard** to manage users, sports, subscri
   - Flaticon UIcons Solid Rounded – solid rounded icons  
   - **bcrypt** – password hashing
 
-## Running the Project
+# Project Setup
 
-1. Start the server:
+To install dependencies and run the project:
 ```bash
+npm install
 node server.js
