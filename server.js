@@ -32,10 +32,10 @@ const upload = multer({ storage });
 
 // MySQL database connection
 const db = mysql.createConnection({
-  host: process.env.DATABASE_HOST,
-  user: process.env.DATABASE_USER,
-  password: process.env.DATABASE_PASSWORD,
-  database: process.env.DATABASE_NAME
+  host: 'localhost',
+  user: 'root',
+  password: '',
+  database: 'sport_db'
 });
 
 
@@ -308,11 +308,10 @@ app.get('/api/admin/top-sports', (req, res) => {
 });
 
 // Start server
-// Start server
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+app.listen(3000, () => {
+  console.log('Server running on http://localhost:3000');
 });
+
 
 
 
